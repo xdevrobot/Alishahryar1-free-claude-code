@@ -14,7 +14,7 @@ Use Claude Code CLI, VS Code, JetBrains ACP, or chat bots through your own Anthr
 
 Free Claude Code routes Anthropic Messages API traffic from Claude Code to NVIDIA NIM, Kimi, Wafer, OpenRouter, DeepSeek, LM Studio, llama.cpp, or Ollama. It keeps Claude Code's client-side protocol stable while letting you choose free, paid, or local models.
 
-[Quick Start](#quick-start) · [Local Admin UI](#local-admin-ui) · [Providers](#choose-a-provider) · [Clients](#connect-claude-code) · [Configuration](#configuration-reference) · [Troubleshooting](#troubleshooting) · [Development](#development)
+[Quick Start](#quick-start) · [Providers](#choose-a-provider) · [Clients](#connect-claude-code) · [Configuration](#configuration-reference) · [Troubleshooting](#troubleshooting) · [Development](#development)
 
 </div>
 
@@ -116,15 +116,9 @@ fcc-claude
 
 `fcc-claude` reads the current configured port and auth token each time it starts, sets the Claude Code environment variables, and then launches the real `claude` command.
 
-## Local Admin UI
-
-The Admin UI is local-only: non-loopback clients, or requests with a non-local `Origin`, receive **403**.
-
-It can load masked config values, validate/apply changes, show runtime status, probe local backends (LM Studio, llama.cpp, Ollama), test providers, list models, and refresh the model cache.
-
 ## Choose A Provider
 
-Use these examples when setting `MODEL` in the [Admin UI](#local-admin-ui) or in `.env`.
+Use these examples when setting `MODEL` in the Admin UI or in `.env`.
 
 Model values use this format:
 
